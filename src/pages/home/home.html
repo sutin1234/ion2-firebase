@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      ionic firebase
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button (click)="addBook()">addBook</button>
+  <ion-list>
+    <button ion-item *ngFor="let book of Books | async">
+        {{ book.name }}
+    </button>
+  </ion-list>
+</ion-content>
